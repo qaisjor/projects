@@ -1,0 +1,268 @@
+
+:root{
+    --main-color : #414BB2;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+
+}
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* header */
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0px;
+    
+}
+
+.logo {
+    width:100px;
+    transform: rotate(-30deg);
+}
+
+nav ul {
+list-style: none;
+display: flex;
+gap:10px;
+}
+nav ul li {
+    
+}
+
+nav ul li a {
+    padding: 10px 30px;
+    border: 3px solid var(--main-color);
+    border-radius: 10px;
+    font-weight: bold;
+    color: var(--main-color);
+    transition: .5s;
+}
+nav ul li:nth-child(1) a{
+    background-color: var(--main-color);
+    color: white;
+}
+
+nav ul li:nth-child(1) a:hover{
+   background-color: white;
+   color: var(--main-color);
+}
+nav ul li:nth-child(2) a:hover {
+    background-color: var(--main-color);
+    color: white;
+}
+/* header  */
+
+/* main */
+.main {
+    height: 250px;
+    background-color: var(--main-color);
+    
+
+}
+.main {
+   text-align: center;
+   
+}
+.main h1{
+    position: relative;
+    font-size: 50px;
+    color: white;
+    top:70px;
+    width: fit-content;
+    margin:0px auto;
+}
+.main h1 span{
+    letter-spacing: -9px;
+}
+.main h1::before{
+    position: absolute;
+    right:-20px;
+    bottom: -22px;
+    font-size: 20px;
+    content: "Test your CSS skills";
+    color: gold;
+}
+.main h1 span span{
+    color: gold;
+    
+}
+/* main  */
+
+/* .wellcom */
+.wellcom {
+    padding-top:50px;
+    height: 450px;
+    font-weight: bold;
+}
+.wellcom .container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+}
+.wellcom .container .text, .image{
+    width: 40%;
+    
+}
+.wellcom .container .text {
+    line-height: 24px;
+}
+.wellcom .container .text span {
+    font-size:50px;
+    font-weight: bold;
+    color: var(--main-color);
+
+}
+.wellcom .container .image {
+    text-align: center;
+}
+.wellcom .container .image img{
+   
+    animation: up-down 1.2s linear  infinite alternate ;
+}
+@media (max-width:480px) {
+    .wellcom .container {
+        flex-direction: column-reverse;
+        gap: 40px;
+    }
+
+    .wellcom .container .text, .image{
+        width: 100%;
+    }
+}
+@keyframes up-down {
+    from {transform: translateY(-7px);}
+    to{transform: translateY(7px);}  
+}
+/* main headinf */
+h1 {
+    color: var(--main-color);
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 20px;
+    margin-top: 50px;
+}
+
+/* main heading   */
+
+/* .wellcom */
+.training {
+    width: 60%;
+    font-weight: bold;
+    
+}
+.bigcont{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+ 
+.training .container p{
+    text-align: center;
+}
+/* .wellcome */
+
+/* start quiz */
+.quiz {
+    padding:50px 0px;
+}
+
+.quiz .container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 70px;
+    font-weight: bold;
+}
+
+.quiz .container  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    
+}
+
+.quiz .container  .card .image{
+    width: 100%;
+}
+.quiz .container  .card .text{
+    text-align: center;
+}
+
+/* end quiz */
+.start-quiz {
+    margin: 30px 0px;
+}
+.start-quiz .container{
+    text-align: center;
+}
+
+.start-quiz button {
+    margin-top: 30px;
+    background-color: var(--main-color);
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    border: none;
+    border-radius: 20px;
+    padding: 20px 50px;
+    transition: .3s;
+    cursor: pointer;
+}
+.start-quiz button:hover{
+    opacity: .9;
+}
+/* start quiz */
+.footertContant{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    width: 100%;
+    color: white;
+}
+
+footer{
+    background-color:#414BB2;
+    /* position: fixed; */
+    bottom: 0 ;
+    left: 0;
+    right: 0;
+    padding:20px 0px ;
+    box-sizing: content-box;
+}
+footer .container .contact li :hover{
+    background-color: #20287a;
+    font-size: 20px;   
+}
+footer .container .socialMedia li :hover{
+    background-color: #20287a;
+    font-size: 40px;   
+}
+@media (max-width:480px) {
+    .container .footertContant{
+        flex-direction: column;
+       }
+       .training{
+        width: 80%;
+       }
+}

@@ -1,0 +1,112 @@
+﻿/* Start Navbar */
+:root {
+    --blue: #35b3f1;
+    --orange: #f15513;
+    --Font: 'Roboto', sans-serif;
+}
+
+.bg-dark {
+    --bs-bg-opacity: 1;
+    background-color: var(--blue) !important;
+}
+
+.buttonTop {
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    color: white;
+    background-color: var(--orange);
+    width: 100px;
+    height: 60px;
+    margin-right: 20px;
+}
+
+.navbar {
+    background-color: var(--blue);
+    font-family: var(--Font);
+    font-weight: 700;
+    font-size: 25px;
+}
+
+    .navbar li {
+        margin-left: 50px;
+    }
+
+    .navbar .navbar-nav .nav-link.active,
+    .navbar .navbar-nav .nav-link:focus,
+    .navbar .navbar-nav .nav-link:hover {
+        color: var(--orange);
+    }
+
+    .navbar a {
+        color: white;
+    }
+
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 20px;
+    font-family: var (--font);
+}
+
+
+/* Start : Home page first hero section */
+.top-hero-section {
+    background-color: #3498db;
+    color: white;
+}
+
+    .top-hero-section a {
+        color: white;
+        font-weight: 600;
+    }
+
+.qualities-img {
+    width: 200px;
+}
+/* END : Home page first hero section */
+
+/* START : Home page 3rd requirement section */
+.requirements-section {
+    background-color: #004d80;
+    color: white;
+}
+/* END : Home page 3rd requirement section */
+
+
+/* START : Home page 4rd newsletter section */
+.home-newsletter {
+    background-color: #004d80;
+    color: white;
+}
+
+    .home-newsletter .form-control {
+        height: 50px;
+        border-color: transparent;
+        border-radius: 20px 0 0 20px;
+    }
+
+    .home-newsletter .btn {
+        min-height: 50px;
+        border-radius: 0 20px 20px 0;
+        background: #be0280;
+        color: #fff;
+    }
+
+/* END : Home page 4rd newsletter section */
+
+
+.clients-section {
+    background-color: #f0f0f0;
+}
+
+/* END-------------------- of home page ---------------------- */
+
+/* START-------------------- of About page ---------------------- */
+.breadcrumbs-section {
+    background-color: #e9ecef;
+}
+
+.row {
+    justify-content: center;
+}

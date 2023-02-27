@@ -1,0 +1,165 @@
+:root{
+    --main-color : #414BB2;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+
+}
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0px;}
+
+    
+.logo {
+    width:100px;
+    transform: rotate(-30deg);
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    gap:10px;
+    }
+    nav ul li {
+        
+    }
+    
+    nav ul li a {
+        padding: 10px 30px;
+        border: 3px solid var(--main-color);
+        border-radius: 10px;
+        font-weight: bold;
+        color: var(--main-color);
+        transition: .5s;
+    }
+    nav ul li:nth-child(1) a{
+        background-color: var(--main-color);
+        color: white;
+    }
+    
+    nav ul li:nth-child(1) a:hover{
+       background-color: white;
+       color: var(--main-color);
+    }
+   
+    header{
+        background-color: white;
+    }
+    body{
+        background-color: #AFD6F4;
+        height: calc(100vh - 120px);
+    }
+    .imitate{
+        height: 100%;
+    }
+    .imitate .container{
+        display: flex;
+        height: 100%;
+        align-items: center;
+    }
+    .imitate .container div{
+        width: 50%;
+        text-align: center;
+    }
+    .imitate .container div:first-child{
+        font-size: 125px;
+        transform: rotate(-10deg);
+        color: #030C68;
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-style: oblique;
+        font-weight: bold;
+    }
+    .imitate .container div h1{
+        font-size: 75px;
+      
+        font-weight: bold;
+        color: white;
+        margin-bottom: 60px;
+    }
+    .imitate .container .brief p{
+        font-size: 50px;
+        color: white;
+        margin-bottom: 80px;
+    }
+    .imitate .container .brief p span{
+        color: #030C68;
+    }
+    .imitate .container .brief a{
+        text-decoration: none;
+        color: white;
+        padding: 10px 50px ;
+        background-color: #030C68;
+        border-radius: 15px;
+        font-size: 40px;
+        transition: .5s ;
+    }
+    .imitate .container .brief a:hover{
+        background-color: white;
+        color: #030C68;
+        transition: .5s;
+    }
+    @media (max-width:480px){
+        .container{
+            flex-wrap:wrap ;
+            /* align-content: flex-end; */
+            justify-content: space-around;
+        }
+        .imitate .container div:first-child{
+            font-size: 80px;
+            color: #030C68;
+            transform: rotate(15deg);
+            width: 100%;
+        }
+        .imitate .container div h1{
+            font-size: 40px;
+            /* font-weight: bold;
+            color: white; */
+            margin-bottom: 30px;
+        }
+        .imitate .container .brief p{
+            font-size: 30px;
+            color: white;
+            margin-bottom: 40px;
+    }
+    .imitate .container div{
+        width: 100%;
+        text-align: center;
+    }
+}
+@media (min-width:481px) and (max-width:768px){
+    .imitate .container div:first-child {
+        font-size: 123px;
+        transform: rotate(25deg);
+    }
+    .imitate .container div {
+        width: 50%;
+        text-align: center;
+    }
+    .imitate .container div h1 {
+        font-size: 75px;
+        margin-bottom: 0%;
+    }
+    .imitate .container .brief p {
+        font-size: 45px;
+        margin-bottom: 37px;
+    }
+    .container {
+        width: 100%;
+    }
+}
+

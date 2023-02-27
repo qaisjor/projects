@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/homepage.css">
+    <link rel="stylesheet" href="../css/wellcompage.css">
+    <script src="https://kit.fontawesome.com/a8b56cb52b.js" crossorigin="anonymous"></script>
+    <title>Welcome Page</title>
+</head>
+<body>
+     <!-- header  -->
+     <header>
+        <div class="container">
+            <div class="logo">
+                <img src="../Image/2.4-removebg-preview.png"> 
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="homePage.html">Home</a></li>
+                    <li><a href="homePage.html">Logout</a></li>
+                </ul>
+            </nav>
+       </div>
+    </header> 
+    <!-- header  -->
+    
+    <!-- start wellcome  -->
+    <div class="wellcome">
+           <div class="container">
+             <div class="name">
+                <h2>Wellcome</h2>
+                <h2 id="userName">Qais Darabseh</h2>
+             </div>
+             <div class="image">
+                <img src="../Image/Welcome-wellcomepage.png" alt="">
+             </div>
+           </div>    
+    </div>
+
+    <!-- end wellcome  -->
+
+    <div class="start-quiz">
+        <div class="container">
+           <p>You can test your Cascading Style Sheets skills with this Quiz. 
+            The test is not official, it's just a nice way to see how much you 
+            know, or don't know, about CSS. This will explain briefly all about CSS. 
+            Whether you are an experienced programmer or not.</p>
+          <a href="imitate.html">  <button>Start Quiz</button> </a>
+        </div>
+        
+    </div>
+    <footer>
+        <div class="container">
+            <div class="footertContant">
+                <div class="contact">
+                    <h4> Contact </h4>
+                    <ul type="none" >
+                        <li>
+                            <a href="" target="_blank"><i class="fa-solid fa-location-dot" style="color:white;font-size:13px;">Jordan - Amman</i></a>
+                        </li>
+                        <li>
+                            <a href="" target="_blank"><i class="fa-solid fa-mobile-screen-button"  style=" color: white; font-size:13px;">  00963778097743</i></a> 
+                        </li>
+                        <li>
+                            <a href="https://mail.google.com/" target="_blank"> <i class="fa-solid fa-envelope"  style=" color: white; font-size: 13px;"> div_academy@gmail.com</i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="copyRight">
+                    <ul type="none">
+                        <br><br>
+                        <li>
+                            © 2022 Div. Academy for coding training,<br> Jordan. All Rights Reserved
+                        </li>
+                    </ul>
+                </div>
+                <div class="socialMedia">
+                    <h4>Social Media</h4>
+                    <ul type="none">
+                        <br>
+                        <li> 
+                            <a href="https://www.facebook.com" target="_blank"> <i class="fa-brands fa-facebook"  style=" color: white; font-size:30px; "></i></a>     
+                            <a href="https://www.twitter.com" target="_blank"  style=" color: white; font-size:30px; "><i class="fa-brands fa-twitter"></i></a>
+                        
+                            <a href="https://www.youtube.com" target="_blank"><i class="fa-brands fa-youtube"style=" color: white; font-size:30px; "></i></a>
+                            <a href="https://www.linkedin.com" target="_blank"><i class="fa-brands fa-linkedin" style=" color: white; font-size:30px; "></i></a>
+                        </li>
+                    </ul>
+                </div>
+               
+   </footer>
+   <script>
+        let userName = document.getElementById("userName");
+        user = sessionStorage.getItem("userName");
+        console.log(user);
+        userName.innerHTML = user.toUpperCase();
+    </script>      
+</body>
+</html>

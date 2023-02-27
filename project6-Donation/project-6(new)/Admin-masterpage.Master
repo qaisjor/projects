@@ -1,0 +1,133 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin-masterpage.Master.cs" Inherits="project_6_new_.Site2" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+        <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600|Open+Sans:400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="easion/css/easion.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.min.js"></script>
+    <script src="easion/js/chart-js-config.js"></script>
+    <style>
+        .dash-nav.dash-nav-dark a {
+            color:#F0EAE7
+        }
+        body{
+                margin: 0px 23px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+              <div class="dash">
+        <div style="    background-color: black;" class="dash-nav dash-nav-dark">
+            <header style="width:100%;background-color:##F3F3F3">
+                <a href="#!" class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </a>
+                <a href="HomePage.aspx" class="easion-logo"><%--<i class="fas fa-sun"></i>--%> <%--<img style="margin-right: 15px;width: 56px;" id="img"  src="img/logooo.png">--%>  <span style="color: white;     font-size: 25px;">Elderly</span></a>
+            </header>
+            <nav class="dash-nav-list">
+                <a href="AdminDashboard.aspx" class="dash-nav-item">
+                    <i class="fas fa-home"></i> Dashboard </a>
+                <div class="dash-nav-dropdown">
+                    <a href="AdminUser.aspx" class="dash-nav-item dash-nav-toggle">
+                        <i class="fas fa-chart-bar"></i> Users </a>
+<%--                    <div class="dash-nav-dropdown-menu">
+                        <a href="chartjs.html" class="dash-nav-dropdown-item">Chart.js</a>
+                    </div>--%>
+                </div>
+                <div class="dash-nav-dropdown ">
+                    <a href="requests.aspx" class="dash-nav-item dash-nav-toggle">
+                        <i class="fas fa-cube"></i> Requests </a>
+        <%--            <div class="dash-nav-dropdown-menu">
+                        <a href="cards.html" class="dash-nav-dropdown-item">Cards</a>
+                        <a href="forms.html" class="dash-nav-dropdown-item">Forms</a>
+                        <div class="dash-nav-dropdown ">
+                            <a href="#" class="dash-nav-dropdown-item dash-nav-dropdown-toggle">Icons</a>
+                            <div class="dash-nav-dropdown-menu">
+                                <a href="icons.html" class="dash-nav-dropdown-item">Solid Icons</a>
+                                <a href="icons.html#regular-icons" class="dash-nav-dropdown-item">Regular Icons</a>
+                                <a href="icons.html#brand-icons" class="dash-nav-dropdown-item">Brand Icons</a>
+                            </div>
+                        </div>
+                        <a href="stats.html" class="dash-nav-dropdown-item">Stats</a>
+                        <a href="tables.html" class="dash-nav-dropdown-item">Tables</a>
+                        <a href="typography.html" class="dash-nav-dropdown-item">Typography</a>
+                        <a href="userinterface.html" class="dash-nav-dropdown-item">User Interface</a>
+                    </div>--%>
+                </div>
+                <div class="dash-nav-dropdown">
+                    <a href="#" class="dash-nav-item dash-nav-dropdown-toggle">
+                        <i class="fas fa-file"></i> Tasks </a>
+                    <div class="dash-nav-dropdown-menu">
+                        <a href="AdminWorkingTask.aspx" class="dash-nav-dropdown-item">Working Tasks</a>
+                        <a href="adminUserCancle.aspx" class="dash-nav-dropdown-item">Ending Requests</a>
+                        <a href="AdminFinishedTask.aspx" class="dash-nav-dropdown-item">Finished Tasks</a>
+
+                       
+                    </div>
+                </div>
+               <div class="dash-nav-dropdown ">
+                    <a href="feedbackrequests.aspx" class="dash-nav-item dash-nav-toggle">
+                        <i class="fas fa-cube"></i> feedback </a>
+
+                </div>
+            </nav>
+        </div>
+        <div class="dash-app">
+            <header class="dash-toolbar">
+                <a href="#!" class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </a>
+                <%if(Request.Url.AbsolutePath.ToString() == "/AdminUser") {  %>  
+            <a href="#!"  runat="server" class="searchbox-toggle">
+                    <i class="fas fa-search"></i>
+                </a>
+             <div class="searchbox" runat="server" action="#!">
+                    <a href="#!" class="searchbox-toggle"> <i class="fas fa-arrow-left"></i> </a>
+               <%--<asp:Button ID="Button1" runat="server" Text="Button" OnClick="Button1_Click1" />--%>
+    <asp:LinkButton ID="LinkButton1"  runat="server" OnClick="LinkButton1_Click"><i class="fas fa-search"></i></asp:LinkButton>
+<%--                    <button  runat="server" type="submit" OnClick="Button1_Click" class="searchbox-submit"> <i class="fas fa-search"></i> </button>--%>
+                    <input  runat="server" type="text" id="search" class="searchbox-input" placeholder="type to search">
+                </div>
+                <% }%> 
+                <div class="tools">
+                   <%-- <a href="https://github.com/subet/easion" target="_blank" class="tools-item">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#!" class="tools-item">
+                        <i class="fas fa-bell"></i>
+                        <i class="tools-item-count">4</i>
+                    </a>--%>
+                    <div class="dropdown tools-item">
+                        <a href="#" class="" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-user"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
+                            <a class="dropdown-item" href="ProfileUser.aspx">Profile</a>
+<%--                            <a class="dropdown-item" href="HomePage.aspx">Logout</a>--%>
+                            <asp:LoginStatus CssClass="dropdown-item" runat="server" LogoutAction="Redirect" LogoutText="Log out" LogoutPageUrl="~/HomePage.aspx" OnLoggingOut="Unnamed_LoggingOut" />
+
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+
+     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="easion/js/easion.js"></script>
+</body>
+</html>
